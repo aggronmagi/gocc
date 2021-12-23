@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/goccmack/gocc/example/errorrecovery/ast"
-	"github.com/goccmack/gocc/example/errorrecovery/errors"
-	"github.com/goccmack/gocc/example/errorrecovery/lexer"
-	"github.com/goccmack/gocc/example/errorrecovery/parser"
+	"github.com/aggronmagi/gocc/example/errorrecovery/ast"
+	"github.com/aggronmagi/gocc/example/errorrecovery/errors"
+	"github.com/aggronmagi/gocc/example/errorrecovery/lexer"
+	"github.com/aggronmagi/gocc/example/errorrecovery/parser"
 )
 
 func TestFail(t *testing.T) {

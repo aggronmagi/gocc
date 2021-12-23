@@ -1,6 +1,6 @@
 package parser
 
-import "github.com/goccmack/gocc/internal/ast"
+import "github.com/aggronmagi/gocc/internal/ast"
 
 const (
 	NUM_STATES = 120

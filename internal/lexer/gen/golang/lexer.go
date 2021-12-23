@@ -19,9 +19,9 @@ import (
 	"path"
 	"text/template"
 
-	"github.com/goccmack/gocc/internal/config"
-	"github.com/goccmack/gocc/internal/io"
-	"github.com/goccmack/gocc/internal/lexer/items"
+	"github.com/aggronmagi/gocc/internal/config"
+	"github.com/aggronmagi/gocc/internal/io"
+	"github.com/aggronmagi/gocc/internal/lexer/items"
 )
 
 func genLexer(pkg, outDir string, itemsets *items.ItemSets, cfg config.Config) {
@@ -41,8 +41,8 @@ func getLexerData(pkg, outDir string, itemsets *items.ItemSets, cfg config.Confi
 	lexSymbols := itemsets.Symbols().List()
 	return &lexerData{
 		Debug:       cfg.DebugLexer(),
-		TokenImport: path.Join(pkg, "token"),
-		UtilImport:  path.Join(pkg, "util"),
+		TokenImport: path.Join(path.Dir(pkg), "token"),
+		UtilImport:  path.Join(path.Dir(pkg), "util"),
 		NumStates:   itemsets.Size(),
 		NumSymbols:  len(lexSymbols),
 		Symbols:     lexSymbols,

@@ -15,7 +15,7 @@
 package golang
 
 import (
-	"github.com/goccmack/gocc/internal/lexer/symbols"
+	"github.com/aggronmagi/gocc/internal/lexer/symbols"
 )
 
 type importType struct {

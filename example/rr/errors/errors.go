@@ -8,7 +8,7 @@ import (
 	"strings"
 	"unicode"
 
-	"github.com/goccmack/gocc/example/rr/token"
+	"github.com/aggronmagi/gocc/example/rr/token"
 )
 
 type ErrorSymbol interface {

@@ -13,7 +13,7 @@ import (
 	"unicode"
 	"unicode/utf8"
 
-	"github.com/goccmack/gocc/internal/frontend/token"
+	"github.com/aggronmagi/gocc/internal/frontend/token"
 )
 
 // A Scanner holds the scanner's internal state while processing

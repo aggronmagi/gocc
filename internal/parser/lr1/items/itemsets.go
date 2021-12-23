@@ -18,9 +18,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/goccmack/gocc/internal/ast"
-	"github.com/goccmack/gocc/internal/parser/first"
-	"github.com/goccmack/gocc/internal/parser/symbols"
+	"github.com/aggronmagi/gocc/internal/ast"
+	"github.com/aggronmagi/gocc/internal/parser/first"
+	"github.com/aggronmagi/gocc/internal/parser/symbols"
 )
 
 // A list of a list of Items.

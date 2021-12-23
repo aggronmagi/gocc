@@ -15,7 +15,7 @@
 package symbols
 
 import (
-	"github.com/goccmack/gocc/internal/ast"
+	"github.com/aggronmagi/gocc/internal/ast"
 )
 
 // key: string of range, e.g.: 'a'-'z'

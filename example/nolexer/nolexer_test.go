@@ -3,8 +3,8 @@ package nolexer
 import (
 	"testing"
 
-	"github.com/goccmack/gocc/example/nolexer/parser"
-	"github.com/goccmack/gocc/example/nolexer/scanner"
+	"github.com/aggronmagi/gocc/example/nolexer/parser"
+	"github.com/aggronmagi/gocc/example/nolexer/scanner"
 )
 
 func Test1(t *testing.T) {

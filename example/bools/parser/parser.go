@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"strings"
 
-	parseError "github.com/goccmack/gocc/example/bools/errors"
-	"github.com/goccmack/gocc/example/bools/token"
+	parseError "github.com/aggronmagi/gocc/example/bools/errors"
+	"github.com/aggronmagi/gocc/example/bools/token"
 )
 
 const (

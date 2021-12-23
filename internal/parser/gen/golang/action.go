@@ -17,7 +17,7 @@ package golang
 import (
 	"path"
 
-	"github.com/goccmack/gocc/internal/io"
+	"github.com/aggronmagi/gocc/internal/io"
 )
 
 func GenAction(outDir string) {

@@ -19,7 +19,7 @@ import (
 	"path"
 	"text/template"
 
-	"github.com/goccmack/gocc/internal/io"
+	"github.com/aggronmagi/gocc/internal/io"
 )
 
 func GenContext(pkg, outDir string) {
@@ -31,7 +31,7 @@ func GenContext(pkg, outDir string) {
 	if err := tmpl.Execute(wr, nil); err != nil {
 		panic(err)
 	}
-	io.WriteFile(path.Join(outDir, "token", "context.go"), wr.Bytes())
+	io.WriteFile(path.Join(path.Dir(outDir), "token", "context.go"), wr.Bytes())
 }
 
 const contextSrc = `

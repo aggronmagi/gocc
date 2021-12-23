@@ -19,11 +19,11 @@ import (
 	"path"
 	"text/template"
 
-	"github.com/goccmack/gocc/internal/ast"
-	"github.com/goccmack/gocc/internal/config"
-	"github.com/goccmack/gocc/internal/io"
-	"github.com/goccmack/gocc/internal/parser/lr1/items"
-	"github.com/goccmack/gocc/internal/parser/symbols"
+	"github.com/aggronmagi/gocc/internal/ast"
+	"github.com/aggronmagi/gocc/internal/config"
+	"github.com/aggronmagi/gocc/internal/io"
+	"github.com/aggronmagi/gocc/internal/parser/lr1/items"
+	"github.com/aggronmagi/gocc/internal/parser/symbols"
 )
 
 func GenParser(pkg, outDir string, prods ast.SyntaxProdList, itemSets *items.ItemSets, symbols *symbols.Symbols, cfg config.Config) {
@@ -50,8 +50,8 @@ type parserData struct {
 func getParserData(pkg string, prods ast.SyntaxProdList, itemSets *items.ItemSets, symbols *symbols.Symbols, cfg config.Config) *parserData {
 	return &parserData{
 		Debug:          cfg.DebugParser(),
-		ErrorImport:    path.Join(pkg, "errors"),
-		TokenImport:    path.Join(pkg, "token"),
+		ErrorImport:    path.Join(path.Dir(pkg), "errors"),
+		TokenImport:    path.Join(path.Dir(pkg), "token"),
 		NumProductions: len(prods),
 		NumStates:      itemSets.Size(),
 		NumSymbols:     symbols.NumSymbols(),
@@ -179,11 +179,11 @@ func (p *Parser) Error(err error, scanner Scanner) (recovered bool, errorAttrib 
 	}
 	for t, action := range actionTab[p.stack.top()].actions {
 		if action != nil {
-			errorAttrib.ExpectedTokens = append(errorAttrib.ExpectedTokens, token.TokMap.Id(token.Type(t)))
+			errorAttrib.ExpectedTokens = append(errorAttrib.ExpectedTokens, TokMap.Id(token.Type(t)))
 		}
 	}
 
-	if action := actionTab[p.stack.top()].actions[token.TokMap.Type("error")]; action != nil {
+	if action := actionTab[p.stack.top()].actions[TokMap.Type("error")]; action != nil {
 		p.stack.push(int(action.(shift)), errorAttrib) // action can only be shift
 	} else {
 		return
@@ -234,7 +234,7 @@ func (p *Parser) newError(err error) error {
 	actRow := actionTab[p.stack.top()]
 	for i, t := range actRow.actions {
 		if t != nil {
-			e.ExpectedTokens = append(e.ExpectedTokens, token.TokMap.Id(token.Type(i)))
+			e.ExpectedTokens = append(e.ExpectedTokens, TokMap.Id(token.Type(i)))
 		}
 	}
 	return e
@@ -255,7 +255,7 @@ func (p *Parser) Parse(scanner Scanner) (res interface{}, err error) {
 			}
 		}
 		{{- if .Debug }}
-		fmt.Printf("S%d %s %s\n", p.stack.top(), token.TokMap.TokenString(p.nextToken), action)
+		fmt.Printf("S%d %s %s\n", p.stack.top(), TokMap.TokenString(p.nextToken), action)
 		{{- end }}
 
 		switch act := action.(type) {

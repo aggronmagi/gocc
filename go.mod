@@ -1,4 +1,4 @@
-module github.com/goccmack/gocc
+module github.com/aggronmagi/gocc
 
 go 1.19
 

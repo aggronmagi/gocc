@@ -16,12 +16,12 @@
 package gen
 
 import (
-	"github.com/goccmack/gocc/internal/ast"
-	"github.com/goccmack/gocc/internal/config"
-	"github.com/goccmack/gocc/internal/parser/gen/golang"
-	"github.com/goccmack/gocc/internal/parser/lr1/items"
-	"github.com/goccmack/gocc/internal/parser/symbols"
-	"github.com/goccmack/gocc/internal/token"
+	"github.com/aggronmagi/gocc/internal/ast"
+	"github.com/aggronmagi/gocc/internal/config"
+	"github.com/aggronmagi/gocc/internal/parser/gen/golang"
+	"github.com/aggronmagi/gocc/internal/parser/lr1/items"
+	"github.com/aggronmagi/gocc/internal/parser/symbols"
+	"github.com/aggronmagi/gocc/internal/token"
 )
 
 func Gen(pkg, outDir, header string, prods ast.SyntaxProdList, symbols *symbols.Symbols,

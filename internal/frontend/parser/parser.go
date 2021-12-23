@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"strconv"
 
-	errs "github.com/goccmack/gocc/internal/frontend/errors"
-	"github.com/goccmack/gocc/internal/frontend/token"
+	errs "github.com/aggronmagi/gocc/internal/frontend/errors"
+	"github.com/aggronmagi/gocc/internal/frontend/token"
 )
 
 type (

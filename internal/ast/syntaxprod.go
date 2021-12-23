@@ -17,7 +17,7 @@ package ast
 import (
 	"fmt"
 
-	"github.com/goccmack/gocc/internal/frontend/token"
+	"github.com/aggronmagi/gocc/internal/frontend/token"
 )
 
 type SyntaxProd struct {
