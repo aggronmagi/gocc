@@ -6,7 +6,7 @@ import (
 	"io/ioutil"
 	"unicode/utf8"
 
-	"github.com/goccmack/gocc/example/usercontext/token"
+	"github.com/aggronmagi/gocc/example/usercontext/token"
 )
 
 const (

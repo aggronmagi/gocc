@@ -1,3 +1,5 @@
+# 说明
+从 https://github.com/goccmack/gocc fork出来,修改生成二级目录. 多个lexer和parser共用同一个errors,token,util定义
 # New
 Have a look at [https://github.com/goccmack/gogll](https://github.com/goccmack/gogll) for scannerless GLL parser generation.
 # Gocc

@@ -15,7 +15,7 @@
 package items
 
 import (
-	"github.com/goccmack/gocc/internal/parser/lr1/action"
+	"github.com/aggronmagi/gocc/internal/parser/lr1/action"
 )
 
 // key: symbol; value: list of actions.

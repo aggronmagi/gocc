@@ -18,10 +18,10 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/goccmack/gocc/internal/ast"
-	"github.com/goccmack/gocc/internal/frontend/parser"
-	"github.com/goccmack/gocc/internal/frontend/scanner"
-	"github.com/goccmack/gocc/internal/frontend/token"
+	"github.com/aggronmagi/gocc/internal/ast"
+	"github.com/aggronmagi/gocc/internal/frontend/parser"
+	"github.com/aggronmagi/gocc/internal/frontend/scanner"
+	"github.com/aggronmagi/gocc/internal/frontend/token"
 )
 
 func findSet(sets *ItemSets, items []string) *ItemSet {

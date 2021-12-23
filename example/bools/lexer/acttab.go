@@ -5,7 +5,7 @@ package lexer
 import (
 	"fmt"
 
-	"github.com/goccmack/gocc/example/bools/token"
+	"github.com/aggronmagi/gocc/example/bools/token"
 )
 
 type ActionTable [NumStates]ActionRow

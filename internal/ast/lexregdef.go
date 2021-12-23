@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/goccmack/gocc/internal/frontend/token"
+	"github.com/aggronmagi/gocc/internal/frontend/token"
 )
 
 type LexRegDef struct {

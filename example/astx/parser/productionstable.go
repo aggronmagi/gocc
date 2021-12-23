@@ -3,8 +3,8 @@
 package parser
 
 import (
-	"github.com/goccmack/gocc/example/astx/ast"
-	"github.com/goccmack/gocc/example/astx/token"
+	"github.com/aggronmagi/gocc/example/astx/ast"
+	"github.com/aggronmagi/gocc/example/astx/token"
 )
 
 type (

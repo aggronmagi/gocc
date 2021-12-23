@@ -18,7 +18,7 @@ import (
 	"path"
 	"text/template"
 
-	"github.com/goccmack/gocc/internal/io"
+	"github.com/aggronmagi/gocc/internal/io"
 )
 
 func GenErrors(pkg, outDir string) {
@@ -27,10 +27,10 @@ func GenErrors(pkg, outDir string) {
 		panic(err)
 	}
 	wr := new(bytes.Buffer)
-	if err := tmpl.Execute(wr, path.Join(pkg, "token")); err != nil {
+	if err := tmpl.Execute(wr, path.Join(path.Dir(pkg), "token")); err != nil {
 		panic(err)
 	}
-	io.WriteFile(path.Join(outDir, "errors", "errors.go"), wr.Bytes())
+	io.WriteFile(path.Join(path.Dir(outDir), "errors", "errors.go"), wr.Bytes())
 }
 
 const errorsSrc = `

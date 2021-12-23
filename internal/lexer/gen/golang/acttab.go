@@ -19,9 +19,9 @@ import (
 	"path"
 	"text/template"
 
-	"github.com/goccmack/gocc/internal/io"
-	"github.com/goccmack/gocc/internal/lexer/items"
-	"github.com/goccmack/gocc/internal/token"
+	"github.com/aggronmagi/gocc/internal/io"
+	"github.com/aggronmagi/gocc/internal/lexer/items"
+	"github.com/aggronmagi/gocc/internal/token"
 )
 
 func genActionTable(pkg, outDir string, itemsets *items.ItemSets, tokMap *token.TokenMap) {
@@ -39,7 +39,7 @@ func genActionTable(pkg, outDir string, itemsets *items.ItemSets, tokMap *token.
 
 func getActTab(pkg string, itemsets *items.ItemSets, tokMap *token.TokenMap) *actTab {
 	actab := &actTab{
-		TokenImport: path.Join(pkg, "token"),
+		TokenImport: path.Join(path.Dir(pkg), "token"),
 		Actions:     make([]action, itemsets.Size()),
 	}
 	for sno, set := range itemsets.List() {

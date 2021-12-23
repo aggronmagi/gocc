@@ -18,8 +18,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/goccmack/gocc/internal/ast"
-	"github.com/goccmack/gocc/internal/parser/lr1/action"
+	"github.com/aggronmagi/gocc/internal/ast"
+	"github.com/aggronmagi/gocc/internal/parser/lr1/action"
 )
 
 //An LR1 Item.

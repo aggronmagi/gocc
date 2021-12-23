@@ -15,9 +15,9 @@
 package golang
 
 import (
-	"github.com/goccmack/gocc/internal/config"
-	"github.com/goccmack/gocc/internal/lexer/items"
-	"github.com/goccmack/gocc/internal/token"
+	"github.com/aggronmagi/gocc/internal/config"
+	"github.com/aggronmagi/gocc/internal/lexer/items"
+	"github.com/aggronmagi/gocc/internal/token"
 )
 
 func Gen(pkg, outDir string, header string, itemsets *items.ItemSets, tokMap *token.TokenMap, cfg config.Config) {

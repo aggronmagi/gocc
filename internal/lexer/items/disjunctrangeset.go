@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/goccmack/gocc/internal/ast"
+	"github.com/aggronmagi/gocc/internal/ast"
 )
 
 // set is kept sorted

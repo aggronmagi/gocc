@@ -18,8 +18,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/goccmack/gocc/internal/ast"
-	"github.com/goccmack/gocc/internal/lexer/symbols"
+	"github.com/aggronmagi/gocc/internal/ast"
+	"github.com/aggronmagi/gocc/internal/lexer/symbols"
 )
 
 type ItemSets struct {

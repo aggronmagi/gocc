@@ -3,10 +3,10 @@ package t1
 import (
 	"testing"
 
-	"github.com/goccmack/gocc/internal/test/t1/errors"
-	"github.com/goccmack/gocc/internal/test/t1/lexer"
-	"github.com/goccmack/gocc/internal/test/t1/parser"
-	"github.com/goccmack/gocc/internal/test/t1/token"
+	"github.com/aggronmagi/gocc/internal/test/t1/errors"
+	"github.com/aggronmagi/gocc/internal/test/t1/lexer"
+	"github.com/aggronmagi/gocc/internal/test/t1/parser"
+	"github.com/aggronmagi/gocc/internal/test/t1/token"
 )
 
 type Equals interface {

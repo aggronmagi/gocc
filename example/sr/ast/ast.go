@@ -1,7 +1,7 @@
 package ast
 
 import (
-	"github.com/goccmack/gocc/example/sr/token"
+	"github.com/aggronmagi/gocc/example/sr/token"
 )
 
 type (
