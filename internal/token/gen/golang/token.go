@@ -129,6 +129,13 @@ type TokenMap struct {
 	idMap   map[string]Type
 }
 
+func NewTokenMap(tm []string,im map[string]Type) TokenMap {
+    return TokenMap{
+        typeMap: tm,
+        idMap: im,
+    }
+}
+
 func (m TokenMap) Id(tok Type) string {
 	if int(tok) < len(m.typeMap) {
 		return m.typeMap[tok]
@@ -228,18 +235,17 @@ package parser
 
 import "{{.Pkg}}"
 
-var TokMap = token.TokenMap{
-	typeMap: []string{
+var TokMap = token.NewTokenMap(
+	[]string{
 {{- range .TypMap }}
 		{{printf "%q" .}},
 {{- end }}
 	},
-
-	idMap: map[string]Type{
+	map[string]token.Type{
 {{- range .IdMap }}
 		{{printf "%s" .}},
 {{- end }}
 	},
-}
+)
 
 `
