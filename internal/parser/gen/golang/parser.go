@@ -226,6 +226,11 @@ func (p *Parser) firstRecoveryState() (recoveryState int, canRecover bool) {
 }
 
 func (p *Parser) newError(err error) error {
+	if err != nil {
+		if pe, ok := err.(*parseError.Error); ok {
+			return pe
+		}
+	}
 	e := &parseError.Error{
 		Err:        err,
 		StackTop:   p.stack.top(),
